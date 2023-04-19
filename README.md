@@ -9,3 +9,5 @@ There are 4 enums: one for coffee type ('Type'), one for coffee preparation ('Pr
 A class called 'Order' compiles these enums together into an order object, with a method that calculates the total cost of the items in the order. The tricky part was the extras, as they could not be included like the others. Extras could be one, two, three or even none, so these were placed in an ArrayList that could have its contents summed together. The total was then rounded to two decimal places, in line with dollar recording. 
 
 An order can then be created in our Main, and the method to calculate its contents.
+
+We can jump into the Tests file to see which tests we have run to ensure we reach the correct total.
