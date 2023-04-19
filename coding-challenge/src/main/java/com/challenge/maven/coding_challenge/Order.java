@@ -4,9 +4,12 @@ import java.util.ArrayList;
 
 public class Order {
 
+	// List all values our class Order will need
 	private Type coffeeType;
     private Prepare preparationStyle;
     private Size coffeeSize;
+    
+    // And the value it may add
     private ArrayList<Extra> extra;
 
     public Order(Type coffeeType, Prepare preparationStyle, Size coffeeSize) {
@@ -26,11 +29,13 @@ public class Order {
         double sizeMultiplier = coffeeSize.getPrice();
         double extrasPrice = extra.stream().mapToDouble(Extra::getPrice).sum();
         		
-//        		
-//        		reduce(0,(cv, pv) -> cv + pv.getPrice(), Double::sum);
 
         double toRound = ((basePrice + stylePrice) * sizeMultiplier) + extrasPrice;
+        
+        // Uncomment the code below to check
 //        System.out.printf("%f - %f - %f - %f", basePrice, stylePrice, sizeMultiplier, extrasPrice);
+        
+        // Round the number up to 2 decimal points
         return (double) Math.round(toRound * 100)/100;
     };
 }

@@ -4,7 +4,7 @@ package com.challenge.maven.coding_challenge;
 public class App {
     public static void main( String[] args ){
     
-    	
+    	// Print out Menu:
     	String menu = "Good Coffeez\n\n" +
     			
 					  "Coffee Types:\n" +
@@ -35,30 +35,21 @@ public class App {
 		
 		System.out.println(menu);
 		
+		// Check we can access the values/constants of each enum
 		double houseBlend = Type.HOUSE_BLEND.getBasePrice();
 		Prepare espresso = Prepare.ESPRESSO;
 		Size large = Size.LARGE;
 		Extra milk = Extra.MILK;
 		
-//		ArrayList<extras> newOrderExtras = new ArrayList<extras>();
-//		newOrderExtras.add(milk);
-		
-		
-//		
-//	    Order order = new Order(coffeeTypes.HOUSE_BLEND, prepare.LATTE, sizes.LARGE);
-//	    order.addExtra(milk);
-//	    
-//	    double order = calculateFinalCost(coffeeTypes.HOUSE_BLEND, prepare.CAPPUCCINO, sizes.ADDICT, extras.COCO_POWDER);
-		
+		// Create an Order
 		Order order1 = new Order(Type.HOUSE_BLEND, Prepare.LATTE, Size.LARGE);
 		
+		// Add extras to that Order
 		order1.addExtra(milk);
 		
-	    double order = order1.calculateFinalCost();
-
-		System.out.println(order);
+		// Calculate the total cost of order
+		System.out.println(order1.calculateFinalCost());
     	
-    	
-
+    
     }
 }

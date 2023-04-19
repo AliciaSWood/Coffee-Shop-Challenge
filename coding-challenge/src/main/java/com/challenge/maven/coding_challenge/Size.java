@@ -2,6 +2,7 @@ package com.challenge.maven.coding_challenge;
 
 public enum Size {
 
+	// Values/constants for all sizes and their multipliers. Only getters, no setters
 	STANDARD("Standard", 1),
 	CHILD("Child", 0.75),
 	LARGE("Large", 1.5),

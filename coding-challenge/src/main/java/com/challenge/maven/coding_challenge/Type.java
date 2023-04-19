@@ -2,6 +2,7 @@ package com.challenge.maven.coding_challenge;
 
 public enum Type {
 
+	// Values/constants for all coffee types. Only getters, no setters
 	HOUSE_BLEND("House Blend", 1.0),
     DARK_ROAST("Dark Roast", 1.5),
     ROBUSTA("Robusta", 2.0),
